@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "inputBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "assignment3/{blobname}.{blobextension}",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "outputBlob",
+      "type": "blob",
+      "direction": "out",
+      "path": "assignment3-copy/{blobname}-copy.{blobextension}",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
